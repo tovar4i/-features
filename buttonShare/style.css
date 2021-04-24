@@ -1,0 +1,122 @@
+:root {
+    --facebook: #4267b2;
+    --twitter: #1da1f2;
+    --telegram: #0088cc;
+    --linkedin: #2867b2;
+    --viber: #665cac;
+    --whatsapp: #25d366;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.social input {
+    display: none;
+}
+
+.social_btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: orange;
+    color: white;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.social_btn:active {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 1)
+}
+
+
+.social_link {
+    width: 40px;
+    height: 40px;
+    background: green;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px #000;
+    color: #fff;
+    font-size: 22px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: absolute;
+}
+
+.facebook {
+    background: var(--facebook);
+}
+
+.social input:checked~.facebook {
+    transform: translate(0, -65px);
+}
+
+.twitter {
+    background: var(--twitter);
+    transition-delay: 0.1s;
+}
+
+.social input:checked~.twitter {
+    transform: translate(60px, -30px);
+}
+
+.linkedin {
+    background: var(--linkedin);
+    transition-delay: 0.2s;
+}
+
+.social input:checked~.linkedin {
+    transform: translate(60px, 30px);
+}
+
+.telegram {
+    background: var(--telegram);
+    transition-delay: 0.3s;
+}
+
+.social input:checked~.telegram {
+    transform: translate(0, 65px);
+}
+
+.viber {
+    background: var(--viber);
+    transition-delay: 0.4s;
+}
+
+.social input:checked~.viber {
+    transform: translate(-60px, 30px);
+}
+
+.whatsapp {
+    background: var(--whatsapp);
+    transition-delay: 0.5s;
+}
+
+.social input:checked~.whatsapp {
+    transform: translate(-60px, -30px);
+}
